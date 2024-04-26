@@ -10,15 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $especialidad = $_POST["especialidad"];
 
     if (CitaMedica::registrarCita($nombre, $correo, $telefono, $direccion,$fecha, $especialidad)) {
-        echo '<script>';
-        echo 'alert("Cita médica registrada correctamente.");';
-        echo 'document.getElementById("registroForm").reset();'; // Limpiar el formulario
-        echo '</script>';
-     } else {
-        // Error en el registro
-        echo '<script>';
-        echo 'alert("Error al registrar la cita médica.");';
-        echo '</script>';
-         }
+
+        session_start();
+        $_SESSION["mensaje"] = "Cita médica registrada correctamente.";
+    } else {
+        echo "Error en el registro";
+    }
+    header("Location: ../vista/registrousuario.php");
+    exit();
 }
 ?>

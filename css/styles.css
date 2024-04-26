@@ -1,7 +1,8 @@
-/* Contenido de styles.css */
-body {
+* Contenido de styles.css */
+
+ body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(252, 252, 252);
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,7 +12,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #6f63df;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -19,13 +20,15 @@ body {
 }
 
 .container form {
-    background-color: #ffcccc; /* Color de fondo rojo claro */
+    background-color: rgb(20, 126, 219); /* Color de fondo rojo claro */
     text-align: center; /* Centra el contenido del formulario */
 }
 
 h2 {
     text-align: center;
+    color: aliceblue;
     margin-bottom: 20px;
+    background-color: rgb(20, 125, 219);
 }
 
 input[type="text"],
@@ -41,17 +44,4 @@ input[type="submit"] {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
-}
-
-input[type="submit"] {
-    background-color: #22d80a; /* Color azul */
-    color: #d81616;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 50%; /* Ancho del botón */
-    margin: 0 auto; /* Centra horizontalmente */
-}
-
-input[type="submit"]:hover {
-    background-color: #0c5203d2;
 }
