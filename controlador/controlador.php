@@ -19,4 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../vista/registrousuario.php");
     exit();
 }
+
+// Obteniendo las citas médicas desde el modelo
+$citas = CitaMedica::obtenerTodasLasCitas();
+
 ?>

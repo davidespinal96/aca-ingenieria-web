@@ -34,5 +34,18 @@ class CitaMedica {
             return false;
         }
     }
+
+    public static function obtenerTodasLasCitas() {
+        try {
+            $conexion = Conexion::conectar(); // Usa la clase `Conexion` para conectarte
+            $stmt = $conexion->prepare("SELECT * FROM citas"); // Consulta para obtener todas las citas
+            $stmt->execute(); // Ejecutar la consulta
+            return $stmt->fetchAll(PDO::FETCH_ASSOC); // Devuelve todas las citas como un arreglo asociativo
+        } catch (PDOException $e) {
+            // En caso de error, puedes elegir cómo manejarlo (aquí, solo se imprime un mensaje)
+            echo "Error al obtener citas: " . $e->getMessage();
+            return [];
+        }
+    }
 }
 ?>
